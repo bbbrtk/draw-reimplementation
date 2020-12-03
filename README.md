@@ -1,29 +1,24 @@
 ### DRAW Reimplementation with QuickDraw
 
-Reimplementation of [DRAW: A Recurrent Neural Network For Image Generation](http://arxiv.org/pdf/1502.04623.pdf) with the GoogleQuickDraw datasets.
-
-  * [DRAW paper](https://arxiv.org/pdf/1502.04623.pdf)
-  * [article by Eric Jang](https://blog.evjang.com/2016/06/understanding-and-implementing.html)
-  * [QuickDraw data](https://github.com/googlecreativelab/quickdraw-dataset)
-  * based on implementation [czm0/draw_pytorch](https://github.com/czm0/draw_pytorch)
+Reimplementation of [DRAW: A Recurrent Neural Network For Image Generation](http://arxiv.org/pdf/1502.04623.pdf) with the GoogleQuickDraw datasets. 
 
 ### Usage
 
-create virtual environment  
+0. create virtual environment  
 
-`python -m venv pytorch_venv`
+ `python -m venv pytorch_venv`
 
-install project dependencies 
+1. install project dependencies 
 
-`pip install -r requirements.txt`
+ `pip install -r requirements.txt`
 
-download dataset from [cloud.google/quickdraw_dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap;tab=objects?prefix=&forceOnObjectsSortingFiltering=false&pageState=("StorageObjectListTable":("f":"%255B%255D")))  (e.g. square.npy or apple.npy) and place it in *data* directory
+2. download dataset from [cloud.google/quickdraw_dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap;tab=objects?prefix=&forceOnObjectsSortingFiltering=false&pageState=("StorageObjectListTable":("f":"%255B%255D")))  (e.g. square.npy or apple.npy) and place it in *data* directory
 
-train providing path to the dataset 
+3. train providing path to the dataset 
 
 `python quickdraw_train.py -p data/path_to_dataset.npy`
 
-or generate using trained weights 
+4. or generate using previously trained weights 
 
 `python utils/generate.py`
 
@@ -35,3 +30,9 @@ or generate using trained weights
 * **Link**: http://arxiv.org/abs/1502.04623
 * **Tags**: Neural Network, generative models, recurrent, attention
 * **Year**: 2015
+
+
+### Other
+  * Based on implementation [czm0/draw_pytorch](https://github.com/czm0/draw_pytorch)
+  * [article by Eric Jang](https://blog.evjang.com/2016/06/understanding-and-implementing.html)
+  * [QuickDraw data](https://github.com/googlecreativelab/quickdraw-dataset)
