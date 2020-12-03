@@ -30,9 +30,9 @@ python utils/generate.py
 
 
 ### Other sources
-  * [TensorFlow implementation] (https://github.com/ericjang/draw)
+  * [TensorFlow implementation](https://github.com/ericjang/draw)
   * [article by Eric Jang](https://blog.evjang.com/2016/06/understanding-and-implementing.html)
   * [QuickDraw data](https://github.com/googlecreativelab/quickdraw-dataset)
-  * [aleju/papers] (https://github.com/aleju/papers/blob/master/neural-nets/DRAW_A_Recurrent_Neural_Network_for_Image_Generation.md)
+  * [aleju/papers](https://github.com/aleju/papers/blob/master/neural-nets/DRAW_A_Recurrent_Neural_Network_for_Image_Generation.md)
  
 Project is based on implementation by [czm0/draw_pytorch](https://github.com/czm0/draw_pytorch)
