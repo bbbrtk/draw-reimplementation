@@ -1,27 +1,24 @@
-### DRAW Reimplementation with QuickDraw
+# DRAW Reimplementation with QuickDraw
 
 Reimplementation of [DRAW: A Recurrent Neural Network For Image Generation](http://arxiv.org/pdf/1502.04623.pdf) with the GoogleQuickDraw datasets. 
 
 ### Usage
 
-0. create virtual environment  
+download dataset from [cloud.google/quickdraw_dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap;tab=objects?prefix=&forceOnObjectsSortingFiltering=false&pageState=("StorageObjectListTable":("f":"%255B%255D")))  (e.g. square.npy or apple.npy) and place it in *data* directory
 
- `python -m venv pytorch_venv`
+```
+# create virtual environment  
+python -m venv pytorch_venv
 
-1. install project dependencies 
+# install project dependencies 
+pip install -r requirements.txt
 
- `pip install -r requirements.txt`
+# train providing path to the dataset 
+python quickdraw_train.py -p data/path_to_dataset.npy
 
-2. download dataset from [cloud.google/quickdraw_dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap;tab=objects?prefix=&forceOnObjectsSortingFiltering=false&pageState=("StorageObjectListTable":("f":"%255B%255D")))  (e.g. square.npy or apple.npy) and place it in *data* directory
-
-3. train providing path to the dataset 
-
-`python quickdraw_train.py -p data/path_to_dataset.npy`
-
-4. or generate using previously trained weights 
-
-`python utils/generate.py`
-
+# or generate using previously trained weights 
+python utils/generate.py
+```
 
 ### Paper
 
@@ -32,7 +29,10 @@ Reimplementation of [DRAW: A Recurrent Neural Network For Image Generation](http
 * **Year**: 2015
 
 
-### Other
-  * Based on implementation [czm0/draw_pytorch](https://github.com/czm0/draw_pytorch)
+### Other sources
+  * [TensorFlow implementation] (https://github.com/ericjang/draw)
   * [article by Eric Jang](https://blog.evjang.com/2016/06/understanding-and-implementing.html)
   * [QuickDraw data](https://github.com/googlecreativelab/quickdraw-dataset)
+  * [aleju/papers] (https://github.com/aleju/papers/blob/master/neural-nets/DRAW_A_Recurrent_Neural_Network_for_Image_Generation.md)
+ 
+Project is based on implementation by [czm0/draw_pytorch](https://github.com/czm0/draw_pytorch)
