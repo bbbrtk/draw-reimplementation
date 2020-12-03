@@ -20,6 +20,13 @@ python quickdraw_train.py -p data/path_to_dataset.npy
 python utils/generate.py
 ```
 
+### Example
+
+Apple dataset mixed with square dataset
+
+![AppleSquareQuickDraw](https://raw.githubusercontent.com/bbbrtk/draw-reimplementation/main/image/jablko-kwadrat.gif)
+
+
 ### Paper
 
 * **Title**: DRAW: A Recurrent Neural Network For Image Generation
