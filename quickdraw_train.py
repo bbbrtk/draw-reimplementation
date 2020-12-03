@@ -18,13 +18,14 @@ torch.set_default_tensor_type('torch.FloatTensor')
 
 # modify here
 PATH = 'data/full_numpy_bitmap_apple.npy'
-
+PATH2 = 'data/full_numpy_bitmap_square.npy'
 
 # https://www.kaggle.com/pinocookie/pytorch-dataset-and-dataloader
 class DatasetMNIST2(Dataset):
     
     def __init__(self, file_path, transform=None):
-        self.data = np.load(file_path)
+        self.data = np.concatenate((np.load(file_path),np.load(PATH2)),axis=0)
+        print(self.data.__class__)
         self.transform = transform
         
     def __len__(self):
