@@ -18,13 +18,36 @@ torch.set_default_tensor_type('torch.FloatTensor')
 
 # modify here
 PATH = 'data/full_numpy_bitmap_apple.npy'
+PATH2 = 'data/full_numpy_bitmap_hand.npy'
+PATH3 = 'data/full_numpy_bitmap_fish.npy'
+PATH4 = 'data/full_numpy_bitmap_duck.npy'
+PATH5 = 'data/full_numpy_bitmap_t-shirt.npy'
+PATH6 = 'data/full_numpy_bitmap_crown.npy'
 
+# PATH = 'data/full_numpy_bitmap_ambulance.npy'
+# PATH2 = 'data/full_numpy_bitmap_bus.npy'
+# PATH3 = 'data/full_numpy_bitmap_police-car.npy'
+# PATH4 = 'data/full_numpy_bitmap_van.npy'
+# PATH5 = 'data/full_numpy_bitmap_truck.npy'
+# PATH6 = 'data/full_numpy_bitmap_car.npy'
+# PATH7 = 'data/full_numpy_bitmap_school-bus.npy'
+# ambulance, bus, police-car, firetruck, truck, van, school-bus, tractor
+# PATH_ARR = [PATH, PATH2, PATH3, PATH4, PATH5, PATH6]
 
 # https://www.kaggle.com/pinocookie/pytorch-dataset-and-dataloader
 class DatasetMNIST2(Dataset):
     
     def __init__(self, file_path, transform=None):
-        self.data = np.load(file_path)
+        self.data = np.concatenate(
+            (np.load(file_path),
+            np.load(PATH2),
+            np.load(PATH3),
+            np.load(PATH4),
+            np.load(PATH5),
+            np.load(PATH6)
+            ),
+            axis=0)
+        print(self.data.__class__)
         self.transform = transform
         
     def __len__(self):
