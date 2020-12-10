@@ -4,11 +4,12 @@ Reimplementation of [DRAW: A Recurrent Neural Network For Image Generation](http
 
 ### Usage
 
-download dataset from [cloud.google/quickdraw_dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap;tab=objects?prefix=&forceOnObjectsSortingFiltering=false&pageState=("StorageObjectListTable":("f":"%255B%255D")))  (e.g. square.npy or apple.npy) and place it in *data* directory
+download dataset from [cloud.google/quickdraw_dataset](https://console.cloud.google.com/storage/browser/quickdraw_dataset/full/numpy_bitmap;tab=objects?prefix=&forceOnObjectsSortingFiltering=false&pageState=("StorageObjectListTable":("f":"%255B%255D")))  (e.g. square.npy, apple.npy or any other) and place it in *data* directory
 
 ```
-# create virtual environment  
+# create and launch virtual environment  
 python -m venv pytorch_venv
+source pytchorch_venv/bin/activate
 
 # install project dependencies 
 pip install -r requirements.txt
@@ -26,6 +27,18 @@ Apple dataset mixed with square dataset
 
 ![AppleSquareQuickDraw](https://raw.githubusercontent.com/bbbrtk/draw-reimplementation/main/image/jablko-kwadrat.gif)
 
+10 datasets mixed together
+
+![DuckFishAppleQuickDraw](https://raw.githubusercontent.com/bbbrtk/draw-reimplementation/main/image/duck-fish-apple.gif)
+
+All dataset containing vehicles mixed together
+
+![VehiclesQuickDraw](https://raw.githubusercontent.com/bbbrtk/draw-reimplementation/main/image/vehicles.gif)
+
+Learning process (3k - 48k steps)
+
+![Learning process](https://raw.githubusercontent.com/bbbrtk/draw-reimplementation/main/image/learning_process.gif)
+
 
 ### Paper
 
@@ -40,6 +53,6 @@ Apple dataset mixed with square dataset
   * [TensorFlow implementation](https://github.com/ericjang/draw)
   * [article by Eric Jang](https://blog.evjang.com/2016/06/understanding-and-implementing.html)
   * [QuickDraw data](https://github.com/googlecreativelab/quickdraw-dataset)
+  * [DRAW reimplementation](https://github.com/czm0/draw_pytorch)
   * [aleju/papers](https://github.com/aleju/papers/blob/master/neural-nets/DRAW_A_Recurrent_Neural_Network_for_Image_Generation.md)
  
-Project is based on implementation by [czm0/draw_pytorch](https://github.com/czm0/draw_pytorch)
